@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -10,39 +10,39 @@
 
 <body>`
 
-  <!-- ������ -->
+  <!-- 导航栏 -->
   <nav>
     <a href="#menu" id="show">Introduction</a>
     <a href="#about">About Us</a>
     <a href="https://campus.new-thread.com/">NewThread</a>
     <a href="#contact">Contact Us</a>
     <a href="#Q&A">Q&A</a>
-    <!-- �� href ��ʹ�� # ���ű�ʾҳ������ת��������Ӧ id ��Ԫ�� -->
+    <!-- 在 href 中使用 # 符号表示页面内跳转到具有相应 id 的元素 -->
   </nav>
 
-  <!--����ƶ��󵼺�����ʾͼƬ-->
+  <!--鼠标移动后导航栏显示图片-->
   <div>
     <div>
       <script>
         window.onload = function () {
-          //��ȡ��Ҫ�����Ķ���
+          //获取需要悬浮的对象
           let show = document.getElementById("show");
-          //��ȡ�����صĲ˵�
+          //获取被隐藏的菜单
           let menu = document.getElementById("menu");
 
-          //��show������������¼�
+          //给show添加鼠标悬浮事件
           show.onmouseover = function () {
-            //�ı�˵���������ʽdisplayΪblock���˵���ʾ
+            //改变菜单的内联样式display为block，菜单显示
             menu.style.display = "block";
           }
           show.onmouseout = function () {
-            //��ȡ�˵���������ֵ
+            //获取菜单栏的坐标值
             let menux = menu.offsetLeft;
             let menuy = menu.offsetTop;
             let menuX = menu.offsetLeft + menu.offsetWidth;
             let menuY = menu.offsetTop + menu.offsetHeight;
 
-            //��ȡ��������ֵ
+            //获取鼠标的坐标值
             let event = window.event;
             let mouseX = event.clientX;
             let mouseY = event.clientY;
@@ -51,14 +51,14 @@
               menu.style.display = "none";
             }
           }
-          //�ֱ��menu������������������뿪�¼�
+          //分别给menu对象绑定鼠标悬浮和鼠标离开事件
           menu.onmouseover = function () {
             menu.style.display = "block";
           }
           menu.onmouseleave = function () {
             menu.style.display = "none";
           }
-          //�ֱ��menu������������������뿪�¼�
+          //分别给menu对象绑定鼠标悬浮和鼠标离开事件
           menu.onmouseover = function () {
             menu.style.display = "block";
           }
@@ -79,9 +79,9 @@
   </div>
 
 
-  <!--��ҳͼƬ-->
-  <!--ʵ��ͼƬ����Ӧ��ӵ����ʱ�Ŵ�����-->
-  <!--����css�Լ�HTML����-->
+  <!--主页图片-->
+  <!--实现图片自适应并拥有临时放大作用-->
+  <!--叠加css以及HTML代码-->
 
 
 
@@ -111,7 +111,7 @@
           height: 200px;
           object-fit: contain;
           margin-top: 50px;
-          /* �����ռ���̶��ĵ����� */
+          /* 留出空间给固定的导航栏 */
         }
 
         .yyy {
@@ -137,7 +137,7 @@
   </div>
 
 
-  <!-- ҳ������ -->
+  <!-- 页面内容 -->
   <link rel="stylesheet" href="model.css">
 
   <div style="padding: 20px;">
@@ -152,55 +152,55 @@
       <h2 id="menu">Introduction</h2>
       <div class="container">
         <div class="theme-frame">
-          <h3>��������Գ</h3>
+          <h3>开发程序猿</h3>
           <h3><img src="images\Geek_Designer.png" class="image1">
            
-            <p> ��Stay Hungry��Stay Foolish��<br>
-              ǰ�ˣ�ǰ�˿����Ǵ���Web��app�Ӿ�������ָ��û��Ĺ���ͨ��HTML��CSS��JavaScript�Լ����������ĸ��ּ�������ܡ����������ʵ�ֻ�������Ʒ���û����潻����
+            <p> “Stay Hungry，Stay Foolish”<br>
+              前端：前端开发是创建Web或app视觉界面呈现给用户的过程通过HTML，CSS及JavaScript以及衍生出来的各种技术、框架、解决方案，实现互联网产品的用户界面交互。
               <br>
-              ��ˣ�ͨ��Ҳ�Ʒ������˿����������û���ʾ,������ǰ�˵����󣬽����߼����������ݽ����� �ͻ���: �ƶ�Ӧ�ÿ�����Ϊ��С�͡����߼����豸��д���������̺ͳ���ļ��ϣ����������ֻ���ƽ����ԡ�
+              后端：通常也称服务器端开发。不对用户显示,负责处理前端的请求，进行逻辑处理和数据交互。 客户端: 移动应用开发是为了小型、无线计算设备编写软件的流程和程序的集合，例如智能手机或平板电脑。
             </p>
           </h3>
         </div>
 
         <div class="theme-frame">
-          <h3>��Ʒ����</h3>
+          <h3>产品经理</h3>
           <h3><img src="images/Geek_PM.png" class="image1">
-            <p style="color:rgb(0, 100, 255)" class="text">"�õ�������������,����û�ù������ܾ����ù��Ƶġ�"
+            <p style="color:rgb(0, 100, 255)" class="text">"好的软件的特征是,明明没用过，但总觉得用过似的。"
 
-            <p>�����ĳһ�����ĳһ��Ĳ�Ʒ���й滮�͹�������Ա�� PM��Ҫӵ�����ܵĲ�Ʒ�߼�˼ά���о��û������������Ʒ�������������ڡ�
-              PM�����Ʒ��UI�ͽ�����ƣ�Ϊ��ƺͿ���ȷ����Ʒԭ�ͣ��ܹ�����Ʒ����и���,����������ʼ򵥡����ɡ� PM��Ҫһ�����ĵ������͹�ͨ�������ܹ����ŶӺ����Ĺ����и�������ɫ������Ч��ͨ��</p>
+            <p>是针对某一项或是某一类的产品进行规划和管理的人员。 PM需要拥有缜密的产品逻辑思维，研究用户心理，负责产品的整个生命周期。
+              PM参与产品的UI和交互设计，为设计和开发确定产品原型，能够将产品变得有个性,操作变得舒适简单、自由。 PM需要一定的文档能力和沟通能力，能够在团队合作的过程中跟各个角色进行有效沟通。</p>
           </h3>
         </div>
 
         <div class="theme-frame">
-          <h3>��Ϸ����</h3>
+          <h3>游戏开发</h3>
           <h3><img src="images\Geek_Game.png" class="image1">
             <p style="color:rgb(74, 223, 223)">"TECH OTAKUS SAVE THE WORLD"
-            <p>����Ϸ�������Ȱ���׷��ʹ��������ڴˡ� �漰�����ͼ��ѧ��ѧϰ������ʹ������ģ������Unity����������׷������磬һ�����£�һ����ɫ�������ǵ�������ı���ʵ�������µĿ��ܣ����ǲ��룬���Ǹı䣬���Ǵ���..
+            <p>对游戏开发的热爱和追求，使我们相聚于此。 涉及计算机图形学的学习，我们使用物理模拟引擎Unity开发我们所追求的世界，一个故事，一个角色，在我们的世界里改变现实，创造新的可能，我们参与，我们改变，我们创造..
             </p>
           </h3>
         </div>
 
         <div class="theme-frame">
-          <h3>��Ϸ����</h3>
+          <h3>游戏美术</h3>
           <h3><img src="images/Geek_Programmer.png" class="image1">
-            <p style="color:rgb(30, 197, 197)">"·��������Զ�⣬�Ǵ������߲���"
+            <p style="color:rgb(30, 197, 197)">"路漫漫其修远兮，非大毅力者不能"
 
-            <p>ͨ�׵�˵������Ϸ�����ܿ�����һ�л��涼������Ϸ���������а����˽�ɫ��UI�����������ߡ���������Ч�ȡ�
-              CG������һ����֧����Ϸ��������Ϸ��������Ϸ��������Ҫ���ֵģ�ͨ��������������ͼ������ɣ������Ӧ�Ĳ�����Ϸ������
-              ������ͬ��λ����Ϸ����ʦ��ͨ���������������һ����������Ϸ��</p>
+            <p>通俗的说法是游戏中所能看到的一切画面都属于游戏美术，其中包括了角色、UI、场景、道具、动画、特效等。
+              CG艺术的一个分支：游戏美术。游戏美术是游戏制作的重要部分的，通过各种软件引擎和技术技巧，完成相应的部分游戏制作，
+              各个不同岗位的游戏美术师们通力合作，才能完成一部完整的游戏。</p>
           </h3>
         </div>
 
         <div class="theme-frame">
-          <h3>��ȫ</h3>
+          <h3>安全</h3>
           <h3><img src="images\Geek_security.png" class="image1">
-            <p style="color:rgb(30, 197, 197)">"·��������Զ�⣬�Ǵ������߲���"
+            <p style="color:rgb(30, 197, 197)">"路漫漫其修远兮，非大毅力者不能"
 
-            <p>ͨ�׵�˵������Ϸ�����ܿ�����һ�л��涼������Ϸ���������а����˽�ɫ��UI�����������ߡ���������Ч�ȡ�
-              CG������һ����֧����Ϸ��������Ϸ��������Ϸ��������Ҫ���ֵģ�ͨ��������������ͼ������ɣ������Ӧ�Ĳ�����Ϸ������
-              ������ͬ��λ����Ϸ����ʦ��ͨ���������������һ����������Ϸ��</p>
+            <p>通俗的说法是游戏中所能看到的一切画面都属于游戏美术，其中包括了角色、UI、场景、道具、动画、特效等。
+              CG艺术的一个分支：游戏美术。游戏美术是游戏制作的重要部分的，通过各种软件引擎和技术技巧，完成相应的部分游戏制作，
+              各个不同岗位的游戏美术师们通力合作，才能完成一部完整的游戏。</p>
           </h3>
         </div>
       </div>
@@ -210,7 +210,7 @@
 
 
 
-    <!--about usģ��-->
+    <!--about us模块-->
     <div class="container000">
       <div class="theme-frame2">
         <h2 id="about" class="text">About Us</h2>
@@ -221,15 +221,15 @@
 
           <div class="small-frame">
             <img src="images\about_Speech.png" alt="Image 1">
-            <p>ÿ�����ǻ����һ�μ������ᣬ�����㱨���ǵ�ѧϰ���ݣ�����Ա֮�佻��ѧϰ��</p>
+            <p>每周我们会举行一次技术例会，用来汇报我们的学习内容，供成员之间交流学习。</p>
           </div>
           <div class="small-frame">
             <img src="images\about_Diversity.png" alt="Image 2">
-            <p>��Ԫ�������ǵ���ɫ������������ӵ�ж��ַ���ѡ��ǰ��ˡ���ȫ��AI����Ʒ/��ơ���Ϸ�ȡ�</p>
+            <p>多元化是我们的特色。在这里，你可以拥有多种方向选择，前后端、安全、AI、产品/设计、游戏等。</p>
           </div>
           <div class="small-frame">
             <img src="images\about_Time.png" alt="Image 3">
-            <p>���ġ����������Ǳر���Ʒ�ʣ�ÿ�����ǻ����ٻ�30Сʱ��ʵ�����С��Ա�֤�����ľ�����</p>
+            <p>耐心、毅力是我们必备的品质，每周我们会至少花30小时在实验室中。以保证技术的精进。</p>
           </div>
           <div class="small-frame1">
 
@@ -244,28 +244,28 @@
 
 
 
-    <!--contact usģ��-->
+    <!--contact us模块-->
     <div class="container">
       <div class="theme-frame3">
         <h2 id="contact">Contact Us</h2>
         <div>
           <div>
             <ul>
-              <li><b>�Ȱ������������geek����ϲ��DIY������������ǿ</b></li>
-              <li><b>�б��/�㷨/Ӳ������Ϊ��(����Ʒ�ɸ���)</b></li>
-              <li><b>���㹻�Ŀ���ʱ�䣬�Ȱ�˼�������������Լ��ļ���</b></li>
+              <li><b>热爱计算机，具有geek精神，喜欢DIY，动手能力较强</b></li>
+              <li><b>有编程/算法/硬件基础为佳(有作品可附上)</b></li>
+              <li><b>有足够的空余时间，热爱思考，对事物有自己的见解</b></li>
             </ul>
             </p>
           </div>
         </div>
         <small>
-          <p style="color:rgb(30, 197, 197)">ps:����˼·ͳ��ֻ��ͨ�������ʼ����ҽ��ܺ��յ��ʼ���ִ��Żᱻ������Ⱥ,�ڶ�ѧ��,
-            �����ʼ���<h6 id="email">newthread_geek@outlook.com</h6>��������.(�����豸ע���˻�����Ϣ�Լ�������,�����»Ϊ��������)</p>
+          <p style="color:rgb(30, 197, 197)">ps:非新思路统招只有通过发送邮件自我介绍后，收到邮件回执后才会被允许进群,在读学生,
+            都可邮件到<h6 id="email">newthread_geek@outlook.com</h6>报名加入.(信中需备注个人基本信息以及意向方向,此招新活动为长期招新)</p>
         </small>
 
 
 
-        <!--��������+��ת����-->
+        <!--复制邮箱+跳转链接-->
         <style>
           body {
             font-family: Arial, sans-serif;
@@ -278,20 +278,20 @@
         <body>
 
 
-          <!-- ���ư�ť -->
-          <button onclick="copyToClipboard('email')" value="newthread_geek@outlook.com">���������ַ</button>
+          <!-- 复制按钮 -->
+          <button onclick="copyToClipboard('email')" value="newthread_geek@outlook.com">复制邮箱地址</button>
 
 
-          <!-- ��ת���� -->
-          <!--�˴�Ϊ��ʾ��Ƶ-->
+          <!-- 跳转链接 -->
+          <!--此处为演示视频-->
           <button target="_blank"><a
               href="https://www.bilibili.com/video/BV1GJ411xZh7/?vd_source=a1c23d88d1c4cd088ea364187a30ad41">Git
               Hub</button></a>
 
 
-          <!-- JavaScript ���� -->
+          <!-- JavaScript 代码 -->
           <script>
-            // ���������ַ��������
+            // 复制邮箱地址到剪贴板
             function copyToClipboard(elementId) {
               var emailElement = document.getElementById(elementId);
               var range = document.createRange();
@@ -300,7 +300,7 @@
               window.getSelection().addRange(range);
               document.execCommand('copy');
               window.getSelection().removeAllRanges();
-              alert('�����ַ�Ѹ��Ƶ�������');
+              alert('邮箱地址已复制到剪贴板');
             }
           </script>
       </div>
@@ -309,72 +309,72 @@
 
   </div>
 
-  <!--QAģ��-->
+  <!--QA模块-->
   <div class="container">
     <div class="theme-frame1" style="background-image: url();">
       <h2 id="Q&A">More Questions</h2>
       <style>
-        /* ��ʼ���ػش����� */
+        /* 初始隐藏回答内容 */
         .answer {
           display: none;
         }
       </style>
 
-      <!-- ����1 -->
-      <h4 onclick="toggleAnswer('answer1')">1.ʲô��Geek(����)��Geek��������ʲô��</h4>
+      <!-- 问题1 -->
+      <h4 onclick="toggleAnswer('answer1')">1.什么是Geek(极客)？Geek精神又是什么？</h4>
       <div id="answer1" class="answer">
-        <p>ӵ�к���֮�ģ��ı�֮���������У������ڡ�</p>
+        <p>拥有好奇之心，改变之力，爱钻研，能折腾。</p>
       </div>
-      <!-- ����2 -->
-      <h4 onclick="toggleAnswer('answer2')">2.�����ǰ�����ʲôʱ�䣿</h4>
+      <!-- 问题2 -->
+      <h4 onclick="toggleAnswer('answer2')">2.招新是安排在什么时间？</h4>
       <div id="answer2" class="answer">
-        <p>���չ�������ʽ����ʱ������9����Ѯ~10����Ѯ�������������һЩ�Ķ������Ե� ��һ����9�Ž�ѧ¥�� �����Ҫ�˽����ǣ����Լ������ǵ�QQȺ�����¾���İ���/�䶯��������Ⱥ֪ͨ��
+        <p>按照惯例，正式招新时间是在9月下旬~10月上旬，不过今年会有一些改动，笔试地 点一般在9号教学楼。 如果想要了解我们，可以加入我们的QQ群，招新具体的安排/变动会在招新群通知。
         </p>
       </div>
 
-      <!-- ����3 -->
-      <h4 onclick="toggleAnswer('answer3')">3.�����п����𣿿���������������ѽ��</h4>
+      <!-- 问题3 -->
+      <h4 onclick="toggleAnswer('answer3')">3.我们有考核吗？考核流程是怎样的呀？</h4>
       <div id="answer3" class="answer">
-        <p>��...����һ����һ�ֱ��Ժ��������ԡ�Ȩ�⼼���������ѧϰ��������һ����һЩ��Ұ�Ե���Ŀ����̭�ʲ����ߡ��ڶ��ֵ������ԣ� ������ı������������ص����⡢��Ȥ���á����˿��������һ��Ⱥ�棬�����ʼ�ʱ���
-          ���ϵ����⣬���Ҳ���������������ֵ����⡣��һ����������Ŀ��ʵ�����ѣ�Ҳ�ޱ�׼�𰸣����ڿ���ͬѧ����ѹ���µ��߼�˼ά��ȫ��ͨ����ΪԤ����Ա����
+        <p>嗯...我们一共有一轮笔试和两轮面试。权衡技术、经验和学习能力，第一轮是一些视野性的题目，淘汰率并不高。第二轮单独面试， 根据你的笔试提出技术相关的问题、兴趣爱好、个人看法。最后一轮群面，首先问及时间分
+          配上的问题，其次也会向你提出各种奇怪的问题。这一轮中许多题目其实并不难，也无标准答案，重在考察同学们在压力下的逻辑思维。全部通过成为预备成员啦。
         </p>
       </div>
 
-      <!-- ����4 -->
-      <h4 onclick="toggleAnswer('answer4')">4.��������������ʽ��</h4>
+      <!-- 问题4 -->
+      <h4 onclick="toggleAnswer('answer4')">4.考核是怎样的形式？</h4>
       <div id="answer4" class="answer">
-        <p>�ڿ����ڼ�ÿ�˻�ӵ��һλ'����'�������ţ�ѧϰ������֪ʶ�������������뷨�����ÿ�ܵ�����������ٽ���һ�ο���ɸѡ
-          ��Ϳ��Գ�ΪGeek����ʽ��Ա�����ڿ����ڱ�������ÿ��30��Сʱ��ʵ����Ŷ,���Կ�����Ҳ������и��Ŷ��
+        <p>在考核期间每人会拥有一位'长者'带你入门，学习技术与知识，交流经验与想法。完成每周的新人任务后再进行一次考核筛选
+          后就可以成为Geek组正式成员啦！在考核期必须满足每周30个小时在实验室哦,所以考核期也不可以懈怠哦！
         </p>
       </div>
 
-      <!-- ����5 -->
-      <h4 onclick="toggleAnswer('answer5')">5.����Geek��֮����ʲô�����أ�</h4>
+      <!-- 问题5 -->
+      <h4 onclick="toggleAnswer('answer5')">5.进入Geek组之后都有什么福利呢？</h4>
       <div id="answer5" class="answer">
-        <p>һ��һ������ָ����ÿһ����Ա���л�һ��mentor, ��������ż�������һͬ�ɳ������ڹ����Ͽ���,�����������˵�ǰ���¿��Ծ��鷢���Լ��ĸ��ԡ�
-          ����ƽ������ͬ�������˰ѷ���ideaʵ�֣�ĥ�����ԡ�����˼ά���ɾ����롣Lab�豸/������Դ���㣬��Ͼ֮��Ҳ����֯�����������Ĺ��µ�������~
+        <p>一对一的新人指引，每一个成员都有会一个mentor, 带你初入门槛，与你一同成长，组内管理较宽松,在尊重其他人的前提下可以尽情发挥自己的个性。
+          打破平淡，与同样疯狂的人把疯狂的idea实现，磨砺耐性、培养思维、成就梦想。Lab设备/网络资源充足，闲暇之余也有组织活动。更有许多的故事等你来听~
         </p>
       </div>
 
-      <!-- ����6 -->
-      <h4 onclick="toggleAnswer('answer6')">6.�����Ŷӻ�Ӱ���ҵ��ճ�ѧϰ��</h4>
+      <!-- 问题6 -->
+      <h4 onclick="toggleAnswer('answer6')">6.进入团队会影响我的日常学习吗？</h4>
       <div id="answer6" class="answer">
-        <p>��Ҫ֪����ѧ��һ���������ɰ����Լ�ѧϰ����ĵط�������������Ͽ�֮���ʵ�Լ��������Լ�����õķ������Ǻͱ��Լ������������һ���ŶӲ�ȱ������ˣ�������Ҳ�ڴ�ͬ��������㣬������һ��ǰ����С����Ҳ�в��ٱ���,
-          ���е�ǰ����, �󲿷ֶ����ҵ�һ��ƽ���, �����Ŷӵľ��������պ����, ��������������
+        <p>你要知道大学是一个可以自由安排自己学习生活的地方。如果你想在上课之余充实自己、激励自己，最好的方法就是和比自己更优秀的人在一起。团队不缺优秀的人，而我们也期待同样优秀的你，让我们一起前进！小组里也有不少保研,
+          考研的前辈们, 大部分都能找到一个平衡点, 而且团队的经历对你日后读研, 工作都大有裨益
         </p>
       </div>
 
-      <!-- ����7 -->
-      <h4 onclick="toggleAnswer('answer7')">7.��ʦ�Լ�ѧ��ѧ���ǵ�������ʲô?</h4>
+      <!-- 问题7 -->
+      <h4 onclick="toggleAnswer('answer7')">7.老师以及学长学姐们的期望是什么?</h4>
       <div id="answer7" class="answer">
-        <p>����ϣ�����к�ǿ����ѧ������ͬʱ��ע������¼�����ϲ����ս���߼���ǿ�����ں͸����Ļ����˺���.��ÿ���˶��������Լ����������飬ÿ���˵ķ���һ���� �����������Ʒ���в�����
-          idea����ô�Ϳ�����־ͬ���ϵ���һ���������
+        <p>我们希望你有很强的自学能力，同时关注新事物、新技术，喜欢挑战，逻辑性强，善于和各种文化的人合作.“每个人都可以做自己想做的事情，每个人的方向不一样。 如果你想做产品或有不错的
+          idea，那么就可以找志同道合的人一起合作。”
         </p>
       </div>
     </div>
   </div>
 
-  <!-- JavaScript ���� -->
+  <!-- JavaScript 代码 -->
   <script>
     function toggleAnswer(answerId) {
       var answer = document.getElementById(answerId);
