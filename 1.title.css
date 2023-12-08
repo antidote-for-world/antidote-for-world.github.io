@@ -1,0 +1,31 @@
+    /* 添加样式以使导航栏固定在页面顶部 */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* 导航栏样式 */
+    nav {
+        background-color: rgb(137, 170, 19);
+        overflow: hidden;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+
+    /* 导航链接样式 */
+    nav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* 鼠标悬停时更改导航链接样式 */
+    nav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
